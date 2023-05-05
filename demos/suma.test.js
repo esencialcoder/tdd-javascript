@@ -1,4 +1,4 @@
-const suma = require('./suma');
+import suma from "./suma";
 
 describe('función suma', ()=>{
   it ('suma de valores 0 y 0 es 0', ()=>{
@@ -9,13 +9,13 @@ describe('función suma', ()=>{
       expect(suma(1, 2)).toBe(3);
     });
     
-    test('sumar 11 + 22 es igual a 33', () => {
+    test.only('sumar 11 + 22 es igual a 33', () => {
       expect(suma(11, 22)).toBe(33);
     });
   
   })
   
-  describe('suma de valores negativos', ()=>{
+  describe.only('suma de valores negativos', ()=>{
     test('sumar -1 + -2 es igual a -3', () => {
       expect(suma(-1, -2)).toBe(-3);
     });
